@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React/*, {useState}*/ from 'react';
+//import Header from './Header';
+import Routes from './routes';
+
+import './global.css';
+
+//Live Reload -> Recarrega automaticamente a págima html quando salva o arquivo
+//Estado -> Informação que será armazenada pela aplicação. Faz um novo render na tela
+    //Imutabilidade -> Não pode mudar a variavel como quisermos no React. Devemos sobrepor o valor.
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello OmniStack!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes />
   );
 }
 
 export default App;
+
+
+// function App() { //função que retorna html
+//   const [counter, setCounter] = useState(0); //retorna um array //Array [valor, functionAtualização]
+
+
+//   function increment(){
+//     setCounter(counter +1);
+//   }
+
+//   return ( 
+//     <div>
+//       <Header>
+//         Semana OmniStack:
+//       </Header>
+//       <Header>Contador: {counter}</Header>
+//       <button onClick={increment}>Incrementar</button>
+//     </div>
+//   );
+// }
+
